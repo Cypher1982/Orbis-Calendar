@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-serif-dial: "Playfair Display", Georgia, Cambria, "Times New Roman", serif;
+    --font-sans-ui: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono-data: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  }
+
+  body {
+    font-family: var(--font-sans-ui);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.font-dial {
+  font-family: var(--font-serif-dial);
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono-data);
+  font-variant-numeric: tabular-nums;
+}
+
+@media print {
+  @page {
+    size: portrait;
+    margin: 0.4in;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-dial-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}

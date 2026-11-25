@@ -1,0 +1,6 @@
+{
+  "name": "Orbis Calendar",
+  "description": "An interactive concentric spiral calendar with arched typography, holiday pointer callouts, and event scheduling.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
